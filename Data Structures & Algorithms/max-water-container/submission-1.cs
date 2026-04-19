@@ -1,0 +1,1 @@
+public class Solution { public int MaxArea(int[] heights) { int length = heights.Length; int resultArea = 0; for (int i = 0; i < length - 1; i++) { for (int j = length - 1; j > i; j--) { int currentArea = Math.Min(heights[i], heights[j]) * (j - i); if (resultArea < currentArea) resultArea = currentArea; } } return resultArea; } }

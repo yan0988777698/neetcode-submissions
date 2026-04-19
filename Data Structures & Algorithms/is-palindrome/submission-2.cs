@@ -1,0 +1,1 @@
+public class Solution { public bool IsPalindrome(string s) { StringBuilder sb = new StringBuilder(); foreach (char c in s) { if (char.IsLetterOrDigit(c)) { sb.Append(char.ToLower(c)); } } StringBuilder sb_reversed = new StringBuilder(); for (int i = sb.Length - 1 ; i >= 0 ; i--) { sb_reversed.Append(sb[i]); } return sb.Equals(sb_reversed); } }

@@ -1,0 +1,1 @@
+public class Solution { public int LongestConsecutive(int[] nums) { HashSet<int> set = new HashSet<int>(); foreach (var num in nums) { set.Add(num); } int longest = 0; foreach (var num in set) { if (!set.Contains(num - 1)) { int length = 0; while (set.Contains(num + length)) { length++; } longest = Math.Max(longest, length); } } return longest; } }

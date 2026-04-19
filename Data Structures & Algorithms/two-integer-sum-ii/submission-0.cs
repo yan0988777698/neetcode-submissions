@@ -1,0 +1,1 @@
+public class Solution { public int[] TwoSum(int[] numbers, int target) { int front = 0; int back = numbers.Length - 1; while (front < back) { int diff = target - numbers[front]; if (numbers[back] > diff) { back--; } if (numbers[back] == diff) { return new int[2] { front + 1, back + 1 }; } if (numbers[back] < diff) { front++; } } return new int[2] { 0, 0 }; } }
